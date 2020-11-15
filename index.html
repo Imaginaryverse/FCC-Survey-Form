@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <title>
+        Survey Form
+    </title>
+</head>
+<body>
+    <div id="background"></div>
+        <div id="content">
+            <header>
+                <h1 id="title">
+                    Survey Form
+                </h1>
+
+                <p id="description">
+                    Thank you for taking the time to help us improve.
+                </p>
+            </header>
+
+            <main>
+                <form id="survey-form">
+
+                    <!-- Name -->
+                    <label class="form-labels" id="name-label" for="name">Name</label>
+                    <input class="forms" id="name" name="name" type="text" placeholder="Enter name" required>
+
+                    <!-- Email -->
+                    <label class="form-labels" id="email-label" for="email">Email</label>
+                    <input class="forms" id="email" type="email" placeholder="Enter email" required>
+
+                    <!-- Age -->
+                    <label class="form-labels" id="number-label" for="number">Age (<span class="clues">optional</span>)</label>
+                    <input class="forms" id="number" type="number" placeholder="Age" min="18" max="99">
+                    
+                    <!-- Dropdown -->
+                    <label class="form-labels" id="dropdown-label" for="dropdown">Which option best discribes your current role?</label>
+                    <select name="role" id="dropdown" class="forms" required>
+                        <option disabled selected value>Select current role</option>
+                        <option value="student">Student</option>
+                        <option value="job">Full Time Job</option>
+                        <option value="learner">Full Time Learner</option>
+                        <option value="preferNo">Prefer not to say</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <!-- Recommend -->
+                    <label class="form-labels">Would you recommend our service to others?</label>
+                    <label>
+                        <input type="radio" class="radio-form" name="user-recommend" value="definitely" checked>
+                        Definitely
+                    </label>
+                    <label>
+                        <input type="radio" class="radio-form" name="user-recommend" value="maybe">
+                        Maybe
+                    </label>
+                    <label>
+                        <input type="radio" class="radio-form" name="user-recommend" value="not-sure">
+                        Not sure
+                    </label>
+
+                    <!-- Feature -->
+                    <label class="form-labels">What is your favorite feature of Survey Form?</label>
+                    <select name="favorite" id="favorite" class="forms" required>
+                        <option disabled selected value>Select an option</option>
+                        <option value="visual-appeal">Visual Appeal</option>
+                        <option value="cool-animations">Cool Animations</option>
+                        <option value="great-name">Great Name</option>
+                        <option value="awesome-creator">Awesome Creator</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <label class="form-labels">What would you like to see improved? (<span class="clues">check all that apply</span>)</label>
+                    <label>
+                        <input type="checkbox" value="colors" name="improvements" class="input-checkbox">
+                        Colors
+                    </label>
+                    <label>
+                        <input type="checkbox" value="animations" name="improvements" class="input-checkbox">
+                        Animations
+                    </label>
+                    <label>
+                        <input type="checkbox" value="structure" name="improvements" class="input-checkbox">
+                        Structure
+                    </label>
+                    <label>
+                        <input type="checkbox" value="language" name="improvements" class="input-checkbox">
+                        Language
+                    </label>
+                    <label>
+                        <input type="checkbox" value="other" name="improvements" class="input-checkbox">
+                        Other
+                    </label>
+                    
+                    <label class="form-labels" for="comments">Any comments or suggestions? (<span class="clues">optional</span>)</label>
+                    <textarea id="comments" name="comments" placeholder="Enter comment here..."></textarea>
+
+                    <button type="submit" id="submit" class="submit-button">Submit</button>
+                </form>
+            </main>
+        </div>
+</body>
+</html>
